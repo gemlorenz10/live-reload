@@ -1,26 +1,26 @@
-# Live Reload
-Reloads the page when file changes are detected. Took advantage of socketio to communicate with browser in realtime.
+# live-reload
+
+## Install
+ 1. Clone this repo.
+ 2. Install package dependencies.
+ ```bash
+    npm install
+ ```
 
 ## Usage
-1. Add this code to the page.
-```javascript
+ 1. Include javascript files in your page.
+ ```HTML
+ <head>
     <script src="http://localhost:8000/client-socket/socket.io.min.js"></script>
     <script src="http://localhost:8000/client-socket/client.io.js"></script>
-</script>
-```
+    <\head>
+ ```
 
-
-2. Run script
-```
+ 2. Run the live-reload server.
+ ```bash
 node .\index.js --rootDir=..\path\to\project\
-```
-
-## Options
-
-- **--port**     - The http port the script is goin to use. Default is  *8000* 
-- **--rootDir**  - Directory that is going to watch. Default is the current directory ( . ).
-
-## Notes
  ```
- Run the webserver you like separately with live-reload. Use different port for live reload.
- ```
+
+ ## Remarks
+
+ Server will run separately with the webserver make sure http port you use is open.
