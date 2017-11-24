@@ -17,7 +17,5 @@
     "socket.io": "^2.0.4",
     "yargs": "^10.0.3"
   },
-  "devDependencies": {
-    "@types/socket.io": "^1.4.31"
-  }
+  "devDependencies": {}
 }
