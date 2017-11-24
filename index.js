@@ -54,10 +54,16 @@ function handler (req, res) {
         data = fs.readFileSync( path.join('.', e.dir, e.base) ).toString(); 
     }
     catch( e ){
-        console.log(e.message);
+        res.writeHead(400)
+        res.write('404 not found!');
+        res.end();
     }
     
     res.writeHead(200, head)
     res.write(data);
     res.end();
 }
+
+process.on('uncaughtException', function (err) {
+    console.log('Caught exception: ' + err);
+  });
