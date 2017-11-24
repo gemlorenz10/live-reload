@@ -49,7 +49,7 @@ console.log('Watching: ', rootDir)
 function handler (req, res) {
     var data;
     var e = path.parse(req.url);
-    var head = ( e.ext == '.js' ) ? {'Content-Type': 'text/javascript'} : {'Content-Type': 'text/javascript'}; 
+    var head = ( e.ext == '.js' ) ? {'Content-Type': 'text/javascript'} : {'Content-Type': 'text/plain'}; 
     try{
         data = fs.readFileSync( path.join('.', e.dir, e.base) ).toString(); 
     }
