@@ -23,4 +23,6 @@ node .\index.js --rootDir=..\path\to\project\
 
  ## Remarks
 
- Server will run separately with the webserver make sure http port you use is open.
+ - live-reload server runs on its own. 
+ - You can use your prefered webserver for your project. 
+ - You just need to include js files to connect to the live-reload server.
