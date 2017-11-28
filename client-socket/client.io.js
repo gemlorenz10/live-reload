@@ -1,4 +1,10 @@
-var socket = io('http://localhost:8085');
-socket.on('reload', ( data )=>{
-    location.reload();
-});
+class Client {
+    constructor() {}
+
+    connect( server ){
+        var socket = io( server );
+        socket.on('reload', ( data )=>{
+            location.reload();
+        });
+    }
+}
