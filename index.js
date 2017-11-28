@@ -38,8 +38,9 @@ watcher
     io.emit('reload', {});
     console.log(`File ${path} has been removed`)
 });
-
+console.log('Server running at: localhost:', httpPort )
 console.log('Watching: ', rootDir)
+
 
 
 /**
