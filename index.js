@@ -7,8 +7,9 @@ const chokidar = require('chokidar');
 const fs = require('fs');
 
 // Options and Defaults
-var httpPort = (argv.port) ? argv.port : 8000;
-var rootDir = (argv.rootDir) ? path.resolve(argv.rootDir) : '.';
+// var httpPort = (argv.port) ? argv.port : 8085;
+let httpPort = 8085;
+var rootDir = (argv.target) ? path.resolve(argv.target) : '.';
 
 // create server
 app.listen(httpPort);

@@ -6,21 +6,21 @@
  ```bash
     npm install
  ```
-
 ## Usage
- 1. Include javascript files in your page.
+ 1. Use default settings
  ```HTML
  <head>
     <script src="http://localhost:8000/client-socket/socket.io.min.js"></script>
     <script src="http://localhost:8000/client-socket/client.io.js"></script>
-    <\head>
+    </head>
  ```
-
  2. Run the live-reload server.
  ```bash
-node .\index.js --rootDir=..\path\to\project\
+node .\index.js --target=..\path\to\project\
  ```
-
+ ## Options
+ 1. **--target** - directory to watch for changes or your project directory. *Default value '.'* or the current working directory.
+ 
  ## Remarks
 
  - live-reload server runs on its own. 
