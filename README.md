@@ -27,12 +27,12 @@ Or you can use this link for socket io client
 
  ### Run the live-reloader server.
  ```bash
-    lvr --target=..\path\to\project\
+    lvr \target\directory\
  ```
+*if no destination/target specified it watches the current working directory.*
 
  ## Options
- 1. **--target** - directory to watch for changes or your project directory. *Default value '.'* or the current working directory.
- 2. **--port** - HTTP port to use when default port is not open. *Default value is '8085'*.
+ 1. **--port** - HTTP port to use when default port is not open. *Default value is '8085'*.
  
  ## Remarks
 - live-reloader's web-server is not yet complete.
