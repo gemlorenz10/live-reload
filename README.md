@@ -41,7 +41,7 @@ Works on node v6.11.3
 
  ### Run the live-reloader server.
  ```bash
-    lv-reloader .\index.js --target=..\path\to\project\
+    lv .\index.js --target=..\path\to\project\
  ```
  ## Options
  1. **--target** - directory to watch for changes or your project directory. *Default value '.'* or the current working directory.
