@@ -1,10 +1,8 @@
-# live-reload
-
+# live-reloader
+Works on node v6.11.3
 ## Install
- 1. Clone this repo.
- 2. Install package dependencies.
  ```bash
-    npm install
+    npm install -g live-reloader
  ```
 ## Usage
  1. Use default settings
@@ -26,9 +24,9 @@
 </head>
 ```
 
- 3. Run the live-reload server.
+ 3. Run the live-reloader server.
  ```bash
-node .\index.js --target=..\path\to\project\
+lv-reloader .\index.js --target=..\path\to\project\
  ```
  ## Options
  1. **--target** - directory to watch for changes or your project directory. *Default value '.'* or the current working directory.
