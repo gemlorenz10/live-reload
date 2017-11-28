@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemlorenz10/live-reload.git"
+    "url": "https://github.com/gemlorenz10/live-reloader.git"
   },
   "author": "gemlorenz10",
   "license": "MIT",
