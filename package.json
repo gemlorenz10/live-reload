@@ -1,6 +1,6 @@
 {
   "name": "live-reloader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Automatically reloads the page when a file change was detected.",
   "main": "index.js",
   "scripts": {
