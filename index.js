@@ -10,7 +10,7 @@ const fs = require('fs');
 // Options and Defaults
 var httpPort = (argv.port) ? argv.port : 8085;
 // let httpPort = 8085;
-var rootDir = (argv._) ? path.resolve(argv._.toString()) : '.';
+var targetDir = (argv._) ? path.resolve(argv._.toString()) : '.';
 
 // create server
 app.listen(httpPort);
@@ -20,7 +20,7 @@ io.on('connection', function (socket) {
 });
 
 // watch on file changes
-var watcher = chokidar.watch( rootDir, {
+var watcher = chokidar.watch( targetDir, {
     ignored: /(^|[\/\\])\../,
     persistent: true,
     ignoreInitial: true
@@ -39,8 +39,13 @@ watcher
     io.emit('reload', {});
     console.log(`File ${path} has been removed`)
 });
+// catch errors
+process.on('uncaughtException', function (err) {
+    console.log('Caught exception: ' + err);
+  });
+
 console.log('Server running at: localhost:', httpPort )
-console.log('Watching: ', rootDir)
+console.log('Watching: ', targetDir)
 
 
 
@@ -54,7 +59,7 @@ function httpServer (req, res) {
     var e = path.parse(req.url);
     var head = ( e.ext == '.js' ) ? {'Content-Type': 'text/javascript'} : {'Content-Type': 'text/plain'}; 
     try{
-        data = fs.readFileSync( path.join('.', e.dir, e.base) ).toString(); 
+        data = fs.readFileSync( path.join(targetDir, e.dir, e.base) ).toString(); 
     }
     catch( e ){
         res.writeHead(500)
@@ -66,7 +71,3 @@ function httpServer (req, res) {
     res.write(data);
     res.end();
 }
-
-process.on('uncaughtException', function (err) {
-    console.log('Caught exception: ' + err);
-  });
