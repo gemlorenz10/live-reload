@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 const http = require('http');
-const app = http.createServer(handler);
+const app = http.createServer(httpServer);
 const io = require('socket.io')(app);
 const argv = require('yargs').argv;
 const path = require('path');
@@ -48,7 +49,7 @@ console.log('Watching: ', rootDir)
  * @param {*} req 
  * @param {*} res 
  */
-function handler (req, res) {
+function httpServer (req, res) {
     var data;
     var e = path.parse(req.url);
     var head = ( e.ext == '.js' ) ? {'Content-Type': 'text/javascript'} : {'Content-Type': 'text/plain'}; 
@@ -56,8 +57,8 @@ function handler (req, res) {
         data = fs.readFileSync( path.join('.', e.dir, e.base) ).toString(); 
     }
     catch( e ){
-        res.writeHead(400)
-        res.write('404 not found!');
+        res.writeHead(500)
+        res.write('Internal Server Error, Unhandled exception');
         res.end();
     }
     
