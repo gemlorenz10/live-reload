@@ -36,9 +36,7 @@ Works on node v6.11.3
         });
     </script>
     </head>
-
 ```
-
  ### Run the live-reloader server.
  ```bash
     lv .\index.js --target=..\path\to\project\
