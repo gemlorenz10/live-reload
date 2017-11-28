@@ -1,15 +1,22 @@
 {
-  "name": "live-reload",
+  "name": "live-reloader",
   "version": "1.0.0",
   "description": "Automatically reloads the page when a file change was detected.",
   "main": "index.js",
   "scripts": {
     "test": "node src/index.js"
   },
+  "bin": {
+    "lv" : "index.js"
+  },
   "keywords": [
     "live",
     "reload"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gemlorenz10/live-reload.git"
+  },
   "author": "gemlorenz10",
   "license": "MIT",
   "dependencies": {
