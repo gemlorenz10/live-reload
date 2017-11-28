@@ -2,7 +2,8 @@
 live-reloader reloads your project in browser once changes are detected. 
 
 ## Install
-Install nodejs with npm
+1. Install nodejs with npm
+2. Install live-reloader
  ```bash
     npm install -g live-reloader
  ```
