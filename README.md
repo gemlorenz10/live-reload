@@ -11,13 +11,8 @@ live-reloader reloads your project in browser once changes are detected.
 ### Connect to live-reloader server
 ```HTML
  <head>
-    <script src="http://localhost/socket.io.min.js"></script>
-    <script>
-        var socket = io('http://localhost:8085');
-        socket.on('reload', ( data )=>{
-            location.reload();
-        });
-    </script>
+    <script src="http://localhost:9000/socket.io.min.js"></script>
+    <script src="http://localhost:9000/default.io.js" ></script>
     </head>
 ```
 Or you can use this link for socket io client

@@ -1,13 +1,13 @@
 {
   "name": "live-reloader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automatically reloads the page when a file change was detected.",
   "main": "index.js",
   "scripts": {
     "test": "node src/index.js"
   },
   "bin": {
-    "lvr" : "index.js"
+    "lvr": "dist/index.js"
   },
   "keywords": [
     "live",
@@ -24,5 +24,7 @@
     "socket.io": "^2.0.4",
     "yargs": "^10.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^8.0.53"
+  }
 }
