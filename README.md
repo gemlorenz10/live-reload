@@ -12,14 +12,12 @@ live-reloader reloads your project in browser once changes are detected.
 ```HTML
  <head>
     <script src="http://localhost:9000/socket.io.js"></script>
-    <script src="http://localhost:9000/default.js" ></script>
     </head>
 ```
 ### Connect when using different port
 ```HTML
  <head>
     <script src="http://localhost:8080/socket.io.js"></script>
-    <script src="http://localhost:8080/client.js" ></script>
     <script>
         connect('http://localhost:8080');
     </script>
