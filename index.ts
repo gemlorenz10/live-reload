@@ -35,6 +35,8 @@ watcher.on('add', target => {
             io.emit('reload', {});
             console.log(`File ${target} has been removed`)
         });
+
+
 // Start message
 console.log('Server running at: localhost:', httpPort )
 console.log('Watching: ', targetDir)
@@ -43,6 +45,7 @@ console.log('Watching: ', targetDir)
 // process.on('uncaughtException', function (err) {
 //     console.log('Caught exception: ' + err);
 //   });
+
 
 // FUNCTIONS
 /**
