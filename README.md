@@ -31,7 +31,7 @@ live-reloader reloads your project in browser once changes are detected.
 *if no destination/target specified it watches the current working directory.*
 
 ## Options
- 1. **--port** - HTTP port to use when default port is not open. *Default value is '8085'*.
+ 1. **--port** - HTTP port to use when default port is not open. *Default value is '9000'*.
  
 ## Remarks
 - live-reloader's web-server is not yet complete.
