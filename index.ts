@@ -42,9 +42,9 @@ console.log('Server running at: localhost:', httpPort )
 console.log('Watching: ', targetDir)
 
 // catch errors
-process.on('uncaughtException', function (err) {
-    console.log('Caught exception: ' + err);
-  });
+// process.on('uncaughtException', function (err) {
+//     console.log('Caught exception: ' + err);
+//   });
 
 
 // FUNCTIONS
@@ -57,17 +57,17 @@ function httpServer (req, res) {
     let data;
     let status;
     let e = path.parse(req.url);
-    let get = path.join( e.dir, e.base );
-    let head = ( e.ext == '.js' ) ? {'Content-Type': 'text/javascript'} : {'Content-Type': 'text/plain'};     
+    let get = (e.ext)?path.join( e.dir, e.base ):path.join( e.dir, '404.html')
+    let head = ( e.ext == '.js' ) ? {'Content-Type': 'text/javascript', 'charset': 'utf-8'} : {'Content-Type': 'text/html', 'charset': 'utf-8'};     
     
     if( fs.existsSync( __dirname + get ) ) {
         status = 200;
         data = fs.readFileSync( __dirname + get ).toString();
     }else{
         status = 404;
-        data = 'File not found!'
+        data = 'Not found!'
     }
-
-    res.writeHead(status, {'Content-Type': 'text/plain'})
+    // res.setHeader(head);
+    res.writeHead(status, head)
     res.end(data);
 }
