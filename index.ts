@@ -42,9 +42,9 @@ console.log('Server running at: localhost:', httpPort )
 console.log('Watching: ', targetDir)
 
 // catch errors
-// process.on('uncaughtException', function (err) {
-//     console.log('Caught exception: ' + err);
-//   });
+process.on('uncaughtException', function (err) {
+    console.log('Caught exception: ' + err);
+  });
 
 
 // FUNCTIONS
